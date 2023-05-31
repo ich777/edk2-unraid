@@ -9,6 +9,9 @@ cd ./edk2
 git checkout ${LAT_V}
 git submodule update --init
 
+# Copy Unraid Logo
+cp ${DATA_DIR}/Logo.bmp ${DATA_DIR}/edk2/MdeModulePkg/Logo/Logo.bmp
+
 # Compile edk2 BaseTools
 make -C BaseTools -j${CPU_COUNT}
 
